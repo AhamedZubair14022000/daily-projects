@@ -1,0 +1,355 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+:root {
+  --primary: #ffba0a;
+  --primary-light: #ffde89;
+  --primary-x-light: #6e6e6ea0;
+  --primary-dark: #454545;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  background: url(./wallpaperflare.com_wallpaper.jpg) no-repeat center;
+  backdrop-filter: blur(8px);
+}
+
+.container {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.box {
+  height: auto;
+  width: 80%;
+  background-color: #f1f2f6;
+  background-image: linear-gradient(315deg, #f1f2f6 0%, #c9c6c6 74%);  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 3rem;
+  box-shadow: 0 0 30px #454545;
+  flex-wrap: wrap;
+}
+.upper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  padding: 2rem 3rem;
+}
+.upper h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #454545;
+  font-size: 2rem;
+}
+.upper h1 i{
+  margin-right: 1rem;
+}
+.box1
+{
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 80%;
+padding: 10px;
+background: linear-gradient(rgb(0, 255, 157), rgb(0, 119, 128));
+border-radius: 40px;
+border: 1px solid rgb(3, 85, 3);
+box-shadow: inset 3px 3px 1px 3px rgba(0,0,0,0.36);
+}
+.range{
+width: 80%;
+height: 20px;
+appearance: none;
+outline: none;
+border-radius: 15px;
+box-shadow: inset 10px -9px 0px 33px rgba(0,0,0,0.36);
+overflow: hidden;
+}
+.range::-webkit-slider-thumb
+{
+appearance: none;
+width: 20px;
+height: 20px;
+background: #fff;
+border-radius: 50%;
+border: 2px solid rgb(16, 16, 16);
+box-shadow: -407px 0 0 400px #fff;
+cursor: pointer;
+}
+#password {
+  width: 100%;
+  border-radius: 2rem;
+  height: 4rem;
+  background-color: var(--primary-x-light);
+  margin-bottom: 2rem;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: 0.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: copy;
+  box-shadow: inset 2px 5px 10px rgba(0,0,0,0.3);
+}
+.range_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.range_container label{
+  font-size: 1.8rem;
+}
+.checkboxes {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+}
+.form_control {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  height: 5rem;
+}
+.form_control label {
+  font-size: 1.8rem;
+  letter-spacing: 0.3px;
+  width: 100%;
+}
+
+.form_control label{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.check {
+  cursor: pointer;
+  position: relative;
+  margin: auto;
+  width: 10px;
+  height: 10px;
+  -webkit-tap-highlight-color: transparent;
+  transform: translate3d(0, 0, 0);
+}
+
+.check:before {
+  content: "";
+  position: absolute;
+  /* top: -3px;
+  left: -5px; */
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #707070;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.check svg {
+  position: relative;
+  z-index: 1;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #000;
+  width: 2rem;
+  height: 2rem;
+  stroke-width: 1.5;
+  transform: translate3d(0, 0, 0);
+  transition: all 0.2s ease;
+}
+
+.check svg path {
+  stroke-dasharray: 60;
+  stroke-dashoffset: 0;
+}
+
+.check svg polyline {
+  stroke-dasharray: 22;
+  stroke-dashoffset: 66;
+}
+
+
+.check:hover svg {
+  stroke: var(--accent-color, #000);
+}
+
+#uppercase:checked + .check svg {
+  stroke: var(--accent-color, #000);
+}
+
+#uppercase:checked + .check svg path {
+  stroke-dashoffset: 60;
+  transition: all 0.3s linear;
+}
+
+#uppercase:checked + .check svg polyline {
+  stroke-dashoffset: 42;
+  transition: all 0.2s linear;
+  transition-delay: 0.15s;
+}
+
+#numbers:checked + .check svg {
+  stroke: var(--accent-color, #000);
+}
+
+#numbers:checked + .check svg path {
+  stroke-dashoffset: 60;
+  transition: all 0.3s linear;
+}
+
+#numbers:checked + .check svg polyline {
+  stroke-dashoffset: 42;
+  transition: all 0.2s linear;
+  transition-delay: 0.15s;
+}
+
+#symbols:checked + .check svg {
+  stroke: var(--accent-color, #000);
+}
+
+#symbols:checked + .check svg path {
+  stroke-dashoffset: 60;
+  transition: all 0.3s linear;
+}
+
+#symbols:checked + .check svg polyline {
+  stroke-dashoffset: 42;
+  transition: all 0.2s linear;
+  transition-delay: 0.15s;
+}
+
+.pushable {
+  position: relative;
+  background: transparent;
+  padding: 0px;
+  width: 80%;
+  /* left: 10%; */
+  border: none;
+  cursor: pointer;
+  outline-offset: 4px;
+  outline-color: deeppink;
+  transition: filter 250ms;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #9a9a9a;
+  border-radius: 8px;
+  filter: blur(2px);
+  will-change: transform;
+  transform: translateY(2px);
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+
+.edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+  background: linear-gradient(
+    to right,
+    #707070 0%,
+    #707070 8%,
+    #707070 92%,
+    #707070 100%
+  );
+}
+
+.front {
+  display: block;
+  position: relative;
+  border-radius: 8px;
+  background: #9a9a9a;
+  padding: 16px 10px;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 1.5rem;
+  transform: translateY(-4px);
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+
+.pushable:hover {
+  filter: brightness(110%);
+}
+
+.pushable:hover .front {
+  transform: translateY(-6px);
+  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.pushable:active .front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+
+.pushable:hover .shadow {
+  transform: translateY(4px);
+  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.pushable:active .shadow {
+  transform: translateY(1px);
+  transition: transform 34ms;
+}
+
+.pushable:focus:not(:focus-visible) {
+  outline: none;
+}
+
+
+@media (min-width:760px) and (max-width: 1199px){
+  html{
+    font-size: 80%;
+  }
+  .box{
+    width: 60%;
+  }
+  .form_control{
+    margin-bottom: 0rem;
+  }
+  .pushable{
+    width: 70%;
+  }
+  .range{
+    width: 60%;
+  }
+}
+
+@media (min-width: 1200px){
+  .box{
+    width: 40%;
+  }
+  .range{
+    width: 50%;
+  }
+  .pushable{
+    width: 50%;
+  }
+}
+

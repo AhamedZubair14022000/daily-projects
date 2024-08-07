@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/7a4b62b0a4.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <section class="upper">
+          <h1>
+            <i class="fa fa-lock" style="color: rgb(81, 79, 79)"> </i>
+            Password Generator
+          </h1>
+
+          <div id="password"></div>
+
+          <div class="range_container">
+            <label for="range">
+              Password Length <span id="passRangeValue">8</span>
+            </label>
+            <input type="range" class="range" min="1" max="15" value="8" id="passRangeInput"/>
+          </div>
+
+          <div class="checkboxes">
+            <div class="form_control">
+              <input type="checkbox" style="display: none;" name="uppercase" id="uppercase">
+              <label for="uppercase" class="check">
+                Include uppercase
+                  <svg viewBox="0 0 18 18">
+                      <path d="M 1 9 L 1 9 c 0 -5 3 -8 8 -8 L 9 1 C 14 1 17 5 17 9 L 17 9 c 0 4 -4 8 -8 8 L 9 17 C 5 17 1 14 1 9 L 1 9 Z"></path>
+                      <polyline points="1 9 7 14 15 4"></polyline>
+                  </svg>   
+              </label>
+            </div>
+            <div class="form_control">
+              <input type="checkbox" style="display: none;" name="uppercase" id="numbers">
+              <label for="numbers" class="check">
+                Include numbers
+                  <svg width="18px" height="18px" viewBox="0 0 18 18">
+                      <path d="M 1 9 L 1 9 c 0 -5 3 -8 8 -8 L 9 1 C 14 1 17 5 17 9 L 17 9 c 0 4 -4 8 -8 8 L 9 17 C 5 17 1 14 1 9 L 1 9 Z"></path>
+                      <polyline points="1 9 7 14 15 4"></polyline>
+                  </svg>  
+              </label>
+            </div>
+            <div class="form_control">
+              <input type="checkbox" style="display: none;" name="uppercase" id="symbols">
+              <label for="symbols" class="check">
+                Include uppercase
+                  <svg width="18px" height="18px" viewBox="0 0 18 18">
+                      <path d="M 1 9 L 1 9 c 0 -5 3 -8 8 -8 L 9 1 C 14 1 17 5 17 9 L 17 9 c 0 4 -4 8 -8 8 L 9 17 C 5 17 1 14 1 9 L 1 9 Z"></path>
+                      <polyline points="1 9 7 14 15 4"></polyline>
+                  </svg>  
+              </label>
+            </div>
+          </div>
+          <div class="range_container">
+            <button class="pushable" id="genBtn">
+              <span class="shadow"></span>
+              <span class="edge"></span>
+              <span class="front">
+                Generate Password
+              </span>
+          </button>
+          </div>
+          
+        </section>
+        
+      </div>
+    </div>
+  </body>
+</html>
